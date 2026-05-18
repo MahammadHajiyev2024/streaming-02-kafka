@@ -1,0 +1,4 @@
+currency_code,customer_id,customer_note,datetime,device_type,discount_code,is_new_customer,is_online,order_id,payment_method,product_id,quantity,referral_source,region_id,unit_price,_kafka_key,_kafka_partition,_kafka_offset
+USD,CUST-4150,Gift for my team,2026-05-04T08:11:00Z,tablet,,false,true,e7324981-a9f0-419f-b708-d0a333451fff,paypal,PY-STREAM-005,3,paid_search,US-TX,59.99,US-TX,0,0
+USD,CUST-1106,Gift for my team,2026-05-04T08:23:00Z,mobile,,false,true,d61943e0-f543-4b5f-9c9a-18605ea4cfe5,paypal,PY-DATA-002,1,paid_search,US-TX,49.99,US-TX,0,1
+CAD,CUST-2133,Learning at my own pace,2026-05-04T08:28:00Z,desktop,,false,true,14da1915-8e74-47be-9e10-f7275d31af46,paypal,PY-NLP-006,1,organic,CA-QC,54.99,CA-QC,0,2
