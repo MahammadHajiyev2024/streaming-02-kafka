@@ -1,0 +1,64 @@
+# ============================================================
+# CITATION.cff (How to cite this project)
+# ============================================================
+
+# REQ.UNIVERSAL: Professional open projects SHOULD include this file.
+# WHY: Support correct citation and attribution.
+# ALT: Internal or private repositories may omit citation metadata.
+# CUSTOM: Update author, repository, license, and keyword fields as needed.
+# USAGE: See https://citation-file-format.github.io/ for details.
+
+cff-version: "1.2.0"
+type: software
+
+title: "streaming-02-kafka"
+version: "0.3.0"
+date-released: "2026-05-09"
+
+authors:
+  - family-names: Case
+    given-names: Denise M.
+    orcid: "https://orcid.org/0000-0001-6165-7389"
+    affiliation: "Northwest Missouri State University, School of Computer Science and Information Systems, Maryville, MO, USA"
+
+repository-code: "https://github.com/denisecase/streaming-02-kafka"
+url: "https://github.com/denisecase/streaming-02-kafka"
+license: MIT
+
+abstract: >
+  Kafka-focused project for producing and consuming streaming messages
+  with a local Kafka broker.
+
+keywords:
+  # identity
+  - streaming-data
+  - analytics-foundations
+  - kafka
+  - producer
+  - consumer
+  - project-based-learning
+  - logging
+
+  # practices
+  - professional-python
+  - src-layout
+  - ci-cd
+  - github-actions
+  - reproducible-workflows
+  - software-quality
+  - professional-practice
+
+  # tools and ecosystem
+  - python
+  - confluent-kafka
+  - git
+  - github
+  - open-source
+  - uv
+  - ruff
+  - pre-commit
+  - pyright
+  - hatchling
+  - zensical
+
+message: "If using this work, please cite it as described in this file."
