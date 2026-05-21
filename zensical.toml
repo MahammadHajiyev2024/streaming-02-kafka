@@ -5,8 +5,8 @@
 
 [project]
 site_name = "streaming-02-kafka"
-site_url = "https://denisecase.github.io/streaming-02-kafka/"
-repo_url = "https://github.com/denisecase/streaming-02-kafka"
+site_url = "https://mahammadhajiyev2024.github.io/streaming-02-kafka/"
+repo_url = "https://github.com/MahammadHajiyev2024/streaming-02-kafka"
 repo_name = "denisecase/streaming-02-kafka"
 site_description = "Project documentation"
 docs_dir = "docs"
@@ -16,7 +16,7 @@ edit_uri = "edit/main/docs/"
 [project.extra]
 # WHY: Social links provide easy access to project repositories and profiles.
 social = [
-    {icon = "fontawesome/brands/github", link = "https://github.com/denisecase/streaming-02-kafka"},
+    {icon = "fontawesome/brands/github", link = "https://github.com/MahammadHajiyev2024/streaming-02-kafka"},
 ]
 
 # ------------------------------------------------------------

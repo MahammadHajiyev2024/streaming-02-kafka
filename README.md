@@ -102,7 +102,7 @@ open a machine terminal in your `Repos` folder:
 
 ```bash
 # Replace username with YOUR GitHub username.
-git clone https://github.com/username/streaming-02-kafka
+git clone https://github.com/MahammadHajiyev2024/streaming-02-kafka
 
 cd streaming-02-kafka
 code .
