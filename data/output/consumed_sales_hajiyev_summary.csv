@@ -1,0 +1,6 @@
+type,category,count,total_revenue,avg_revenue_per_order,total_quantity,avg_quantity_per_order
+region,CA-QC,1,54.99,54.99,1,1.0
+region,US-TX,2,229.96,114.98,4,2.0
+product,PY-DATA-002,1,49.99,49.99,1,1.0
+product,PY-NLP-006,1,54.99,54.99,1,1.0
+product,PY-STREAM-005,1,179.97,179.97,3,3.0

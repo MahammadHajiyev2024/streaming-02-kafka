@@ -246,3 +246,650 @@ CHECK:
 2026-05-18 17:07:38 | INFO | C02 | ========================
 2026-05-18 17:07:38 | INFO | C02 | Consumer executed successfully!
 2026-05-18 17:07:38 | INFO | C02 | ========================
+2026-05-21 10:25:06 | DEBUG | P02 | KAFKA_BOOTSTRAP_SERVERS           = localhost:9092
+2026-05-21 10:25:06 | DEBUG | P02 | KAFKA_BROKER_ADDRESS_FAMILY       = v6
+2026-05-21 10:25:06 | DEBUG | P02 | KAFKA_TOPIC                       = streaming-02-kafka-case
+2026-05-21 10:25:06 | DEBUG | P02 | KAFKA_CLEAR_TOPIC_ON_START        = true
+2026-05-21 10:25:06 | DEBUG | P02 | PRODUCER_MESSAGE_COUNT            = 3
+2026-05-21 10:25:06 | DEBUG | P02 | PRODUCER_MESSAGE_INTERVAL_SECONDS = 2
+2026-05-21 10:25:06 | DEBUG | P02 | PRODUCER_MAX_MESSAGES             = 50
+2026-05-21 10:25:06 | DEBUG | P02 | PRODUCER_POLL_INTERVAL_SECONDS    = 15
+2026-05-21 10:25:06 | DEBUG | P02 | KAFKA_GROUP_ID                    = streaming-consumer-group-A
+2026-05-21 10:25:06 | DEBUG | P02 | KAFKA_AUTO_OFFSET_RESET           = earliest
+2026-05-21 10:25:06 | DEBUG | P02 | CONSUMER_TIMEOUT_SECONDS          = 10
+2026-05-21 10:25:06 | DEBUG | P02 | CONSUMER_MAX_MESSAGES             = 1000
+2026-05-21 10:25:06 | INFO | P02 | === RUN START ===
+2026-05-21 10:25:06 | INFO | P02 | project=P02
+2026-05-21 10:25:06 | INFO | P02 | repo_dir=streaming-02-kafka
+2026-05-21 10:25:06 | INFO | P02 | python=3.14.5
+2026-05-21 10:25:06 | INFO | P02 | os=Windows 11
+2026-05-21 10:25:06 | INFO | P02 | shell=powershell
+2026-05-21 10:25:06 | INFO | P02 | cwd=.
+2026-05-21 10:25:06 | INFO | P02 | github_actions=False
+2026-05-21 10:25:06 | INFO | P02 | ========================
+2026-05-21 10:25:06 | INFO | P02 | START producer main()
+2026-05-21 10:25:06 | INFO | P02 | ========================
+2026-05-21 10:25:06 | INFO | P02 | ROOT_DIR = .
+2026-05-21 10:25:06 | INFO | P02 | DATA_DIR = data
+2026-05-21 10:25:06 | INFO | P02 | SALES_CSV = data\sales.csv
+2026-05-21 10:25:06 | INFO | P02 | ========================
+2026-05-21 10:25:06 | INFO | P02 | SECTION A. Acquire
+2026-05-21 10:25:06 | INFO | P02 | ========================
+2026-05-21 10:25:06 | INFO | P02 | Loading settings from .env...
+2026-05-21 10:25:06 | INFO | P02 | KAFKA_BOOTSTRAP_SERVERS           = localhost:9092
+2026-05-21 10:25:06 | INFO | P02 | KAFKA_TOPIC                       = streaming-02-kafka-case
+2026-05-21 10:25:06 | INFO | P02 | PRODUCER_MESSAGE_COUNT            = 3
+2026-05-21 10:25:06 | INFO | P02 | PRODUCER_MESSAGE_INTERVAL_SECONDS = 2.0
+2026-05-21 10:25:06 | INFO | P02 | KAFKA_CLEAR_TOPIC_ON_START        = True
+2026-05-21 10:25:06 | INFO | P02 | Verifying Kafka connection...
+2026-05-21 10:25:06 | INFO | P02 | Kafka port is reachable.
+2026-05-21 10:25:06 | INFO | P02 | ========================
+2026-05-21 10:25:06 | INFO | P02 | SECTION P. Produce Messages
+2026-05-21 10:25:06 | INFO | P02 | ========================
+2026-05-21 10:25:06 | INFO | P02 | Sending messages...
+2026-05-21 10:25:06 | INFO | P02 | Sending up to 3 message(s) to topic 'streaming-02-kafka-case'.
+2026-05-21 10:25:06 | INFO | P02 | Watch each sale arrive. Press CTRL+C to stop early.
+
+2026-05-21 10:25:06 | INFO | P02 | {
+  order_id: e7324981-a9f0-419f-b708-d0a333451fff
+  datetime: 2026-05-04T08:11:00Z
+  region_id: US-TX
+  currency_code: USD
+  product_id: PY-STREAM-005
+  unit_price: 59.99
+  quantity: 3
+  is_online: true
+  customer_id: CUST-4150
+  is_new_customer: false
+  device_type: tablet
+  payment_method: paypal
+  referral_source: paid_search
+  discount_code: 
+  customer_note: Gift for my team
+}
+2026-05-21 10:25:06 | INFO | P02 |   Sending message with key=US-TX
+2026-05-21 10:25:07 | INFO | P02 |   MESSAGE SENT  sent=1
+2026-05-21 10:25:09 | INFO | P02 | {
+  order_id: d61943e0-f543-4b5f-9c9a-18605ea4cfe5
+  datetime: 2026-05-04T08:23:00Z
+  region_id: US-TX
+  currency_code: USD
+  product_id: PY-DATA-002
+  unit_price: 49.99
+  quantity: 1
+  is_online: true
+  customer_id: CUST-1106
+  is_new_customer: false
+  device_type: mobile
+  payment_method: paypal
+  referral_source: paid_search
+  discount_code: 
+  customer_note: Gift for my team
+}
+2026-05-21 10:25:09 | INFO | P02 |   Sending message with key=US-TX
+2026-05-21 10:25:09 | INFO | P02 |   MESSAGE SENT  sent=2
+2026-05-21 10:25:11 | INFO | P02 | {
+  order_id: 14da1915-8e74-47be-9e10-f7275d31af46
+  datetime: 2026-05-04T08:28:00Z
+  region_id: CA-QC
+  currency_code: CAD
+  product_id: PY-NLP-006
+  unit_price: 54.99
+  quantity: 1
+  is_online: true
+  customer_id: CUST-2133
+  is_new_customer: false
+  device_type: desktop
+  payment_method: paypal
+  referral_source: organic
+  discount_code: 
+  customer_note: Learning at my own pace
+}
+2026-05-21 10:25:11 | INFO | P02 |   Sending message with key=CA-QC
+2026-05-21 10:25:11 | INFO | P02 |   MESSAGE SENT  sent=3
+2026-05-21 10:25:13 | INFO | P02 | ========================
+2026-05-21 10:25:13 | INFO | P02 | SECTION E. Exit
+2026-05-21 10:25:13 | INFO | P02 | ========================
+2026-05-21 10:25:13 | INFO | P02 | Summary:
+2026-05-21 10:25:13 | INFO | P02 | Sent 3 message(s) to topic 'streaming-02-kafka-case'.
+2026-05-21 10:25:13 | INFO | P02 | ========================
+2026-05-21 10:25:13 | INFO | P02 | Producer executed successfully!
+2026-05-21 10:25:13 | INFO | P02 | ========================
+2026-05-21 10:25:40 | DEBUG | C02 | KAFKA_BOOTSTRAP_SERVERS           = localhost:9092
+2026-05-21 10:25:40 | DEBUG | C02 | KAFKA_BROKER_ADDRESS_FAMILY       = v6
+2026-05-21 10:25:40 | DEBUG | C02 | KAFKA_TOPIC                       = streaming-02-kafka-case
+2026-05-21 10:25:40 | DEBUG | C02 | KAFKA_CLEAR_TOPIC_ON_START        = true
+2026-05-21 10:25:40 | DEBUG | C02 | PRODUCER_MESSAGE_COUNT            = 3
+2026-05-21 10:25:40 | DEBUG | C02 | PRODUCER_MESSAGE_INTERVAL_SECONDS = 2
+2026-05-21 10:25:40 | DEBUG | C02 | PRODUCER_MAX_MESSAGES             = 50
+2026-05-21 10:25:40 | DEBUG | C02 | PRODUCER_POLL_INTERVAL_SECONDS    = 15
+2026-05-21 10:25:40 | DEBUG | C02 | KAFKA_GROUP_ID                    = streaming-consumer-group-A
+2026-05-21 10:25:40 | DEBUG | C02 | KAFKA_AUTO_OFFSET_RESET           = earliest
+2026-05-21 10:25:40 | DEBUG | C02 | CONSUMER_TIMEOUT_SECONDS          = 10
+2026-05-21 10:25:40 | DEBUG | C02 | CONSUMER_MAX_MESSAGES             = 1000
+2026-05-21 10:25:40 | DEBUG | P02 | KAFKA_BOOTSTRAP_SERVERS           = localhost:9092
+2026-05-21 10:25:40 | DEBUG | P02 | KAFKA_BROKER_ADDRESS_FAMILY       = v6
+2026-05-21 10:25:40 | DEBUG | P02 | KAFKA_TOPIC                       = streaming-02-kafka-case
+2026-05-21 10:25:40 | DEBUG | P02 | KAFKA_CLEAR_TOPIC_ON_START        = true
+2026-05-21 10:25:40 | DEBUG | P02 | PRODUCER_MESSAGE_COUNT            = 3
+2026-05-21 10:25:40 | DEBUG | P02 | PRODUCER_MESSAGE_INTERVAL_SECONDS = 2
+2026-05-21 10:25:40 | DEBUG | P02 | PRODUCER_MAX_MESSAGES             = 50
+2026-05-21 10:25:40 | DEBUG | P02 | PRODUCER_POLL_INTERVAL_SECONDS    = 15
+2026-05-21 10:25:40 | DEBUG | P02 | KAFKA_GROUP_ID                    = streaming-consumer-group-A
+2026-05-21 10:25:40 | DEBUG | P02 | KAFKA_AUTO_OFFSET_RESET           = earliest
+2026-05-21 10:25:40 | DEBUG | P02 | CONSUMER_TIMEOUT_SECONDS          = 10
+2026-05-21 10:25:40 | DEBUG | P02 | CONSUMER_MAX_MESSAGES             = 1000
+2026-05-21 10:25:40 | INFO | C02 | Processing raw message.
+2026-05-21 10:26:16 | DEBUG | C02 | KAFKA_BOOTSTRAP_SERVERS           = localhost:9092
+2026-05-21 10:26:16 | DEBUG | C02 | KAFKA_BROKER_ADDRESS_FAMILY       = v6
+2026-05-21 10:26:16 | DEBUG | C02 | KAFKA_TOPIC                       = streaming-02-kafka-case
+2026-05-21 10:26:16 | DEBUG | C02 | KAFKA_CLEAR_TOPIC_ON_START        = true
+2026-05-21 10:26:16 | DEBUG | C02 | PRODUCER_MESSAGE_COUNT            = 3
+2026-05-21 10:26:16 | DEBUG | C02 | PRODUCER_MESSAGE_INTERVAL_SECONDS = 2
+2026-05-21 10:26:16 | DEBUG | C02 | PRODUCER_MAX_MESSAGES             = 50
+2026-05-21 10:26:16 | DEBUG | C02 | PRODUCER_POLL_INTERVAL_SECONDS    = 15
+2026-05-21 10:26:16 | DEBUG | C02 | KAFKA_GROUP_ID                    = streaming-consumer-group-A
+2026-05-21 10:26:16 | DEBUG | C02 | KAFKA_AUTO_OFFSET_RESET           = earliest
+2026-05-21 10:26:16 | DEBUG | C02 | CONSUMER_TIMEOUT_SECONDS          = 10
+2026-05-21 10:26:16 | DEBUG | C02 | CONSUMER_MAX_MESSAGES             = 1000
+2026-05-21 10:26:16 | INFO | C02 | === RUN START ===
+2026-05-21 10:26:16 | INFO | C02 | project=C02
+2026-05-21 10:26:16 | INFO | C02 | repo_dir=streaming-02-kafka
+2026-05-21 10:26:16 | INFO | C02 | python=3.14.5
+2026-05-21 10:26:16 | INFO | C02 | os=Windows 11
+2026-05-21 10:26:16 | INFO | C02 | shell=powershell
+2026-05-21 10:26:16 | INFO | C02 | cwd=.
+2026-05-21 10:26:16 | INFO | C02 | github_actions=False
+2026-05-21 10:26:16 | INFO | C02 | ========================
+2026-05-21 10:26:16 | INFO | C02 | START consumer main()
+2026-05-21 10:26:16 | INFO | C02 | ========================
+2026-05-21 10:26:16 | INFO | C02 | ROOT_DIR = .
+2026-05-21 10:26:16 | INFO | C02 | DATA_DIR = data
+2026-05-21 10:26:16 | INFO | C02 | OUTPUT_CSV = data\output\consumed_sales.csv
+2026-05-21 10:26:16 | INFO | C02 | ========================
+2026-05-21 10:26:16 | INFO | C02 | SECTION A. Acquire
+2026-05-21 10:26:16 | INFO | C02 | ========================
+2026-05-21 10:26:16 | INFO | C02 | Loading settings from .env...
+2026-05-21 10:26:16 | INFO | C02 | KAFKA_BOOTSTRAP_SERVERS  = localhost:9092
+2026-05-21 10:26:16 | INFO | C02 | KAFKA_TOPIC              = streaming-02-kafka-case
+2026-05-21 10:26:16 | INFO | C02 | KAFKA_GROUP_ID           = streaming-consumer-group-A
+2026-05-21 10:26:16 | INFO | C02 | CONSUMER_TIMEOUT_SECONDS = 10.0
+2026-05-21 10:26:16 | INFO | C02 | CONSUMER_MAX_MESSAGES    = 1000
+2026-05-21 10:26:16 | INFO | C02 | Verifying Kafka connection...
+2026-05-21 10:26:16 | INFO | C02 | Kafka port is reachable.
+2026-05-21 10:26:16 | INFO | C02 | Verifying Kafka topic...
+2026-05-21 10:26:34 | INFO | C02 | Topic 'streaming-02-kafka-case' exists.
+2026-05-21 10:26:34 | INFO | C02 | Found 3 message(s) available.
+2026-05-21 10:26:34 | INFO | C02 | Creating Kafka consumer...
+2026-05-21 10:26:34 | INFO | C02 | Subscribed to topic: 'streaming-02-kafka-case' (reading from beginning)
+2026-05-21 10:26:34 | INFO | C02 | ========================
+2026-05-21 10:26:34 | INFO | C02 | SECTION C. Consume and Process Messages
+2026-05-21 10:26:34 | INFO | C02 | ========================
+2026-05-21 10:26:34 | INFO | C02 | Initializing output...
+2026-05-21 10:26:34 | INFO | C02 | Output CSV cleared: consumed_sales.csv
+2026-05-21 10:26:34 | INFO | C02 | Consuming messages...
+2026-05-21 10:26:34 | INFO | C02 | Waiting for up to 1000 message(s).
+2026-05-21 10:26:34 | INFO | C02 | Press CTRL+C to stop early.
+
+2026-05-21 10:26:40 | INFO | C02 | {'currency_code': 'USD', 'customer_id': 'CUST-4150', 'customer_note': 'Gift for my team', 'datetime': '2026-05-04T08:11:00Z', 'device_type': 'tablet', 'discount_code': '', 'is_new_customer': 'false', 'is_online': 'true', 'order_id': 'e7324981-a9f0-419f-b708-d0a333451fff', 'payment_method': 'paypal', 'product_id': 'PY-STREAM-005', 'quantity': '3', 'referral_source': 'paid_search', 'region_id': 'US-TX', 'unit_price': '59.99', '_kafka_key': 'US-TX', '_kafka_partition': 0, '_kafka_offset': 0}
+2026-05-21 10:26:40 | INFO | C02 | Processing raw message.
+2026-05-21 10:26:40 | INFO | C02 | MESSAGE CONSUMED
+2026-05-21 10:26:40 | INFO | C02 | consumed=1
+2026-05-21 10:26:40 | INFO | C02 | {'currency_code': 'USD', 'customer_id': 'CUST-1106', 'customer_note': 'Gift for my team', 'datetime': '2026-05-04T08:23:00Z', 'device_type': 'mobile', 'discount_code': '', 'is_new_customer': 'false', 'is_online': 'true', 'order_id': 'd61943e0-f543-4b5f-9c9a-18605ea4cfe5', 'payment_method': 'paypal', 'product_id': 'PY-DATA-002', 'quantity': '1', 'referral_source': 'paid_search', 'region_id': 'US-TX', 'unit_price': '49.99', '_kafka_key': 'US-TX', '_kafka_partition': 0, '_kafka_offset': 1}
+2026-05-21 10:26:40 | INFO | C02 | Processing raw message.
+2026-05-21 10:26:40 | INFO | C02 | MESSAGE CONSUMED
+2026-05-21 10:26:40 | INFO | C02 | consumed=2
+2026-05-21 10:26:40 | INFO | C02 | {'currency_code': 'CAD', 'customer_id': 'CUST-2133', 'customer_note': 'Learning at my own pace', 'datetime': '2026-05-04T08:28:00Z', 'device_type': 'desktop', 'discount_code': '', 'is_new_customer': 'false', 'is_online': 'true', 'order_id': '14da1915-8e74-47be-9e10-f7275d31af46', 'payment_method': 'paypal', 'product_id': 'PY-NLP-006', 'quantity': '1', 'referral_source': 'organic', 'region_id': 'CA-QC', 'unit_price': '54.99', '_kafka_key': 'CA-QC', '_kafka_partition': 0, '_kafka_offset': 2}
+2026-05-21 10:26:40 | INFO | C02 | Processing raw message.
+2026-05-21 10:26:40 | INFO | C02 | MESSAGE CONSUMED
+2026-05-21 10:26:40 | INFO | C02 | consumed=3
+2026-05-21 10:26:50 | INFO | C02 | No message received within 10.0s timeout.
+2026-05-21 10:26:50 | INFO | C02 | Producer finished or paused. Stopping consumer.
+2026-05-21 10:26:51 | INFO | C02 | Kafka consumer closed.
+2026-05-21 10:26:51 | INFO | C02 | ========================
+2026-05-21 10:26:51 | INFO | C02 | SECTION E. Exit
+2026-05-21 10:26:51 | INFO | C02 | ========================
+2026-05-21 10:26:51 | INFO | C02 | Summary:
+2026-05-21 10:26:51 | INFO | C02 | Consumed 3 message(s) from topic 'streaming-02-kafka-case'.
+2026-05-21 10:26:51 | INFO | C02 | OUTPUT_CSV = data\output\consumed_sales.csv
+2026-05-21 10:26:51 | INFO | C02 | ========================
+2026-05-21 10:26:51 | INFO | C02 | Consumer executed successfully!
+2026-05-21 10:26:51 | INFO | C02 | ========================
+2026-05-21 10:40:00 | DEBUG | H02 | KAFKA_BOOTSTRAP_SERVERS           = localhost:9092
+2026-05-21 10:40:00 | DEBUG | H02 | KAFKA_BROKER_ADDRESS_FAMILY       = v6
+2026-05-21 10:40:00 | DEBUG | H02 | KAFKA_TOPIC                       = streaming-02-kafka-case
+2026-05-21 10:40:00 | DEBUG | H02 | KAFKA_CLEAR_TOPIC_ON_START        = true
+2026-05-21 10:40:00 | DEBUG | H02 | PRODUCER_MESSAGE_COUNT            = 3
+2026-05-21 10:40:00 | DEBUG | H02 | PRODUCER_MESSAGE_INTERVAL_SECONDS = 2
+2026-05-21 10:40:00 | DEBUG | H02 | PRODUCER_MAX_MESSAGES             = 50
+2026-05-21 10:40:00 | DEBUG | H02 | PRODUCER_POLL_INTERVAL_SECONDS    = 15
+2026-05-21 10:40:00 | DEBUG | H02 | KAFKA_GROUP_ID                    = streaming-consumer-group-A
+2026-05-21 10:40:00 | DEBUG | H02 | KAFKA_AUTO_OFFSET_RESET           = earliest
+2026-05-21 10:40:00 | DEBUG | H02 | CONSUMER_TIMEOUT_SECONDS          = 10
+2026-05-21 10:40:00 | DEBUG | H02 | CONSUMER_MAX_MESSAGES             = 1000
+2026-05-21 10:40:00 | INFO | H02 | === RUN START ===
+2026-05-21 10:40:00 | INFO | H02 | project=H02
+2026-05-21 10:40:00 | INFO | H02 | repo_dir=streaming-02-kafka
+2026-05-21 10:40:00 | INFO | H02 | python=3.14.5
+2026-05-21 10:40:00 | INFO | H02 | os=Windows 11
+2026-05-21 10:40:00 | INFO | H02 | shell=powershell
+2026-05-21 10:40:00 | INFO | H02 | cwd=.
+2026-05-21 10:40:00 | INFO | H02 | github_actions=False
+2026-05-21 10:40:00 | INFO | H02 | ========================
+2026-05-21 10:40:00 | INFO | H02 | START consumer main()
+2026-05-21 10:40:00 | INFO | H02 | ========================
+2026-05-21 10:40:00 | INFO | H02 | ROOT_DIR = .
+2026-05-21 10:40:00 | INFO | H02 | DATA_DIR = data
+2026-05-21 10:40:00 | INFO | H02 | OUTPUT_CSV = data\output\consumed_sales_hajiyev_usd.csv
+2026-05-21 10:40:00 | INFO | H02 | ========================
+2026-05-21 10:40:00 | INFO | H02 | SECTION A. Acquire
+2026-05-21 10:40:00 | INFO | H02 | ========================
+2026-05-21 10:40:00 | INFO | H02 | Loading settings from .env...
+2026-05-21 10:40:00 | INFO | H02 | KAFKA_BOOTSTRAP_SERVERS  = localhost:9092
+2026-05-21 10:40:00 | INFO | H02 | KAFKA_TOPIC              = streaming-02-kafka-case
+2026-05-21 10:40:00 | INFO | H02 | KAFKA_GROUP_ID           = streaming-consumer-group-A
+2026-05-21 10:40:00 | INFO | H02 | CONSUMER_TIMEOUT_SECONDS = 10.0
+2026-05-21 10:40:00 | INFO | H02 | CONSUMER_MAX_MESSAGES    = 1000
+2026-05-21 10:40:00 | INFO | H02 | Verifying Kafka connection...
+2026-05-21 10:40:01 | INFO | H02 | Kafka port is reachable.
+2026-05-21 10:40:01 | INFO | H02 | Verifying Kafka topic...
+2026-05-21 10:40:01 | INFO | H02 | Topic 'streaming-02-kafka-case' exists.
+2026-05-21 10:40:01 | INFO | H02 | Found 3 message(s) available.
+2026-05-21 10:40:01 | INFO | H02 | Creating Kafka consumer...
+2026-05-21 10:40:01 | INFO | H02 | Subscribed to topic: 'streaming-02-kafka-case' (reading from beginning)
+2026-05-21 10:40:01 | INFO | H02 | ========================
+2026-05-21 10:40:01 | INFO | H02 | SECTION C. Consume and Process Messages
+2026-05-21 10:40:01 | INFO | H02 | ========================
+2026-05-21 10:40:01 | INFO | H02 | Initializing output...
+2026-05-21 10:40:01 | INFO | H02 | Output CSV cleared: consumed_sales_hajiyev_usd.csv
+2026-05-21 10:40:01 | INFO | H02 | Consuming messages...
+2026-05-21 10:40:01 | INFO | H02 | Waiting for up to 1000 message(s).
+2026-05-21 10:40:01 | INFO | H02 | Press CTRL+C to stop early.
+
+2026-05-21 10:40:04 | INFO | H02 | {'currency_code': 'USD', 'customer_id': 'CUST-4150', 'customer_note': 'Gift for my team', 'datetime': '2026-05-04T08:11:00Z', 'device_type': 'tablet', 'discount_code': '', 'is_new_customer': 'false', 'is_online': 'true', 'order_id': 'e7324981-a9f0-419f-b708-d0a333451fff', 'payment_method': 'paypal', 'product_id': 'PY-STREAM-005', 'quantity': '3', 'referral_source': 'paid_search', 'region_id': 'US-TX', 'unit_price': '59.99', '_kafka_key': 'US-TX', '_kafka_partition': 0, '_kafka_offset': 0}
+2026-05-21 10:40:04 | INFO | H02 | Processing raw message.
+2026-05-21 10:40:04 | INFO | H02 | MESSAGE CONSUMED AND SAVED
+2026-05-21 10:40:04 | INFO | H02 | consumed=1
+2026-05-21 10:40:04 | INFO | H02 | {'currency_code': 'USD', 'customer_id': 'CUST-1106', 'customer_note': 'Gift for my team', 'datetime': '2026-05-04T08:23:00Z', 'device_type': 'mobile', 'discount_code': '', 'is_new_customer': 'false', 'is_online': 'true', 'order_id': 'd61943e0-f543-4b5f-9c9a-18605ea4cfe5', 'payment_method': 'paypal', 'product_id': 'PY-DATA-002', 'quantity': '1', 'referral_source': 'paid_search', 'region_id': 'US-TX', 'unit_price': '49.99', '_kafka_key': 'US-TX', '_kafka_partition': 0, '_kafka_offset': 1}
+2026-05-21 10:40:04 | INFO | H02 | Processing raw message.
+2026-05-21 10:40:04 | INFO | H02 | MESSAGE CONSUMED AND SAVED
+2026-05-21 10:40:04 | INFO | H02 | consumed=2
+2026-05-21 10:40:04 | INFO | H02 | {'currency_code': 'CAD', 'customer_id': 'CUST-2133', 'customer_note': 'Learning at my own pace', 'datetime': '2026-05-04T08:28:00Z', 'device_type': 'desktop', 'discount_code': '', 'is_new_customer': 'false', 'is_online': 'true', 'order_id': '14da1915-8e74-47be-9e10-f7275d31af46', 'payment_method': 'paypal', 'product_id': 'PY-NLP-006', 'quantity': '1', 'referral_source': 'organic', 'region_id': 'CA-QC', 'unit_price': '54.99', '_kafka_key': 'CA-QC', '_kafka_partition': 0, '_kafka_offset': 2}
+2026-05-21 10:40:04 | INFO | H02 | Processing raw message.
+2026-05-21 10:40:04 | INFO | H02 | SKIPPED: Non-USD currency (CAD)
+2026-05-21 10:40:14 | INFO | H02 | No message received within 10.0s timeout.
+2026-05-21 10:40:14 | INFO | H02 | Producer finished or paused. Stopping consumer.
+2026-05-21 10:40:14 | INFO | H02 | Kafka consumer closed.
+2026-05-21 10:40:14 | INFO | H02 | ========================
+2026-05-21 10:40:14 | INFO | H02 | SECTION E. Exit
+2026-05-21 10:40:14 | INFO | H02 | ========================
+2026-05-21 10:40:14 | INFO | H02 | Summary:
+2026-05-21 10:40:14 | INFO | H02 | Consumed and saved 2 USD message(s) from topic 'streaming-02-kafka-case'.
+2026-05-21 10:40:14 | INFO | H02 | OUTPUT_CSV = data\output\consumed_sales_hajiyev_usd.csv
+2026-05-21 10:40:14 | INFO | H02 | ========================
+2026-05-21 10:40:14 | INFO | H02 | Consumer executed successfully!
+2026-05-21 10:40:14 | INFO | H02 | ========================
+2026-05-22 08:32:30 | DEBUG | H03 | KAFKA_BOOTSTRAP_SERVERS           = localhost:9092
+2026-05-22 08:32:30 | DEBUG | H03 | KAFKA_BROKER_ADDRESS_FAMILY       = v6
+2026-05-22 08:32:30 | DEBUG | H03 | KAFKA_TOPIC                       = streaming-02-kafka-case
+2026-05-22 08:32:30 | DEBUG | H03 | KAFKA_CLEAR_TOPIC_ON_START        = true
+2026-05-22 08:32:30 | DEBUG | H03 | PRODUCER_MESSAGE_COUNT            = 3
+2026-05-22 08:32:30 | DEBUG | H03 | PRODUCER_MESSAGE_INTERVAL_SECONDS = 2
+2026-05-22 08:32:30 | DEBUG | H03 | PRODUCER_MAX_MESSAGES             = 50
+2026-05-22 08:32:30 | DEBUG | H03 | PRODUCER_POLL_INTERVAL_SECONDS    = 15
+2026-05-22 08:32:30 | DEBUG | H03 | KAFKA_GROUP_ID                    = streaming-consumer-group-A
+2026-05-22 08:32:30 | DEBUG | H03 | KAFKA_AUTO_OFFSET_RESET           = earliest
+2026-05-22 08:32:30 | DEBUG | H03 | CONSUMER_TIMEOUT_SECONDS          = 10
+2026-05-22 08:32:30 | DEBUG | H03 | CONSUMER_MAX_MESSAGES             = 1000
+2026-05-22 08:32:30 | INFO | H03 | === RUN START ===
+2026-05-22 08:32:30 | INFO | H03 | project=H03
+2026-05-22 08:32:30 | INFO | H03 | repo_dir=streaming-02-kafka
+2026-05-22 08:32:30 | INFO | H03 | python=3.14.5
+2026-05-22 08:32:30 | INFO | H03 | os=Windows 11
+2026-05-22 08:32:30 | INFO | H03 | shell=powershell
+2026-05-22 08:32:30 | INFO | H03 | cwd=.
+2026-05-22 08:32:30 | INFO | H03 | github_actions=False
+2026-05-22 08:32:30 | INFO | H03 | ========================
+2026-05-22 08:32:30 | INFO | H03 | START consumer main()
+2026-05-22 08:32:30 | INFO | H03 | ========================
+2026-05-22 08:32:30 | INFO | H03 | ROOT_DIR = .
+2026-05-22 08:32:30 | INFO | H03 | DATA_DIR = data
+2026-05-22 08:32:30 | INFO | H03 | OUTPUT_CSV = data\output\consumed_sales_hajiyev_summary.csv
+2026-05-22 08:32:30 | INFO | H03 | ========================
+2026-05-22 08:32:30 | INFO | H03 | SECTION A. Acquire
+2026-05-22 08:32:30 | INFO | H03 | ========================
+2026-05-22 08:32:30 | INFO | H03 | Loading settings from .env...
+2026-05-22 08:32:30 | INFO | H03 | KAFKA_BOOTSTRAP_SERVERS  = localhost:9092
+2026-05-22 08:32:30 | INFO | H03 | KAFKA_TOPIC              = streaming-02-kafka-case
+2026-05-22 08:32:30 | INFO | H03 | KAFKA_GROUP_ID           = streaming-consumer-group-A
+2026-05-22 08:32:30 | INFO | H03 | CONSUMER_TIMEOUT_SECONDS = 10.0
+2026-05-22 08:32:30 | INFO | H03 | CONSUMER_MAX_MESSAGES    = 1000
+2026-05-22 08:32:30 | INFO | H03 | Verifying Kafka connection...
+2026-05-22 08:32:34 | ERROR | H03 | !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Python code is running,
+but Kafka is not available.
+Kafka is not reachable.
+The program tried to connect to:
+    KAFKA_BOOTSTRAP_SERVERS = localhost:9092
+
+CHECK:
+1. Start Kafka first. Follow START_KAFKA.md.
+2. Verify Kafka is running. In a terminal, run:
+   cd ~/kafka
+   bin/kafka-topics.sh --list --bootstrap-server localhost:9092
+3. Verify the topic exists. Follow MANAGE_TOPIC.md.
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+2026-05-22 08:33:11 | DEBUG | H03 | KAFKA_BOOTSTRAP_SERVERS           = localhost:9092
+2026-05-22 08:33:11 | DEBUG | H03 | KAFKA_BROKER_ADDRESS_FAMILY       = v6
+2026-05-22 08:33:11 | DEBUG | H03 | KAFKA_TOPIC                       = streaming-02-kafka-case
+2026-05-22 08:33:11 | DEBUG | H03 | KAFKA_CLEAR_TOPIC_ON_START        = true
+2026-05-22 08:33:11 | DEBUG | H03 | PRODUCER_MESSAGE_COUNT            = 3
+2026-05-22 08:33:11 | DEBUG | H03 | PRODUCER_MESSAGE_INTERVAL_SECONDS = 2
+2026-05-22 08:33:11 | DEBUG | H03 | PRODUCER_MAX_MESSAGES             = 50
+2026-05-22 08:33:11 | DEBUG | H03 | PRODUCER_POLL_INTERVAL_SECONDS    = 15
+2026-05-22 08:33:11 | DEBUG | H03 | KAFKA_GROUP_ID                    = streaming-consumer-group-A
+2026-05-22 08:33:11 | DEBUG | H03 | KAFKA_AUTO_OFFSET_RESET           = earliest
+2026-05-22 08:33:11 | DEBUG | H03 | CONSUMER_TIMEOUT_SECONDS          = 10
+2026-05-22 08:33:11 | DEBUG | H03 | CONSUMER_MAX_MESSAGES             = 1000
+2026-05-22 08:33:11 | INFO | H03 | === RUN START ===
+2026-05-22 08:33:11 | INFO | H03 | project=H03
+2026-05-22 08:33:11 | INFO | H03 | repo_dir=streaming-02-kafka
+2026-05-22 08:33:11 | INFO | H03 | python=3.14.5
+2026-05-22 08:33:12 | INFO | H03 | os=Windows 11
+2026-05-22 08:33:12 | INFO | H03 | shell=powershell
+2026-05-22 08:33:12 | INFO | H03 | cwd=.
+2026-05-22 08:33:12 | INFO | H03 | github_actions=False
+2026-05-22 08:33:12 | INFO | H03 | ========================
+2026-05-22 08:33:12 | INFO | H03 | START consumer main()
+2026-05-22 08:33:12 | INFO | H03 | ========================
+2026-05-22 08:33:12 | INFO | H03 | ROOT_DIR = .
+2026-05-22 08:33:12 | INFO | H03 | DATA_DIR = data
+2026-05-22 08:33:12 | INFO | H03 | OUTPUT_CSV = data\output\consumed_sales_hajiyev_summary.csv
+2026-05-22 08:33:12 | INFO | H03 | ========================
+2026-05-22 08:33:12 | INFO | H03 | SECTION A. Acquire
+2026-05-22 08:33:12 | INFO | H03 | ========================
+2026-05-22 08:33:12 | INFO | H03 | Loading settings from .env...
+2026-05-22 08:33:12 | INFO | H03 | KAFKA_BOOTSTRAP_SERVERS  = localhost:9092
+2026-05-22 08:33:12 | INFO | H03 | KAFKA_TOPIC              = streaming-02-kafka-case
+2026-05-22 08:33:12 | INFO | H03 | KAFKA_GROUP_ID           = streaming-consumer-group-A
+2026-05-22 08:33:12 | INFO | H03 | CONSUMER_TIMEOUT_SECONDS = 10.0
+2026-05-22 08:33:12 | INFO | H03 | CONSUMER_MAX_MESSAGES    = 1000
+2026-05-22 08:33:12 | INFO | H03 | Verifying Kafka connection...
+2026-05-22 08:33:16 | ERROR | H03 | !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Python code is running,
+but Kafka is not available.
+Kafka is not reachable.
+The program tried to connect to:
+    KAFKA_BOOTSTRAP_SERVERS = localhost:9092
+
+CHECK:
+1. Start Kafka first. Follow START_KAFKA.md.
+2. Verify Kafka is running. In a terminal, run:
+   cd ~/kafka
+   bin/kafka-topics.sh --list --bootstrap-server localhost:9092
+3. Verify the topic exists. Follow MANAGE_TOPIC.md.
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+2026-05-22 08:38:14 | DEBUG | C02 | KAFKA_BOOTSTRAP_SERVERS           = localhost:9092
+2026-05-22 08:38:14 | DEBUG | C02 | KAFKA_BROKER_ADDRESS_FAMILY       = v6
+2026-05-22 08:38:14 | DEBUG | C02 | KAFKA_TOPIC                       = streaming-02-kafka-case
+2026-05-22 08:38:14 | DEBUG | C02 | KAFKA_CLEAR_TOPIC_ON_START        = true
+2026-05-22 08:38:14 | DEBUG | C02 | PRODUCER_MESSAGE_COUNT            = 3
+2026-05-22 08:38:14 | DEBUG | C02 | PRODUCER_MESSAGE_INTERVAL_SECONDS = 2
+2026-05-22 08:38:14 | DEBUG | C02 | PRODUCER_MAX_MESSAGES             = 50
+2026-05-22 08:38:14 | DEBUG | C02 | PRODUCER_POLL_INTERVAL_SECONDS    = 15
+2026-05-22 08:38:14 | DEBUG | C02 | KAFKA_GROUP_ID                    = streaming-consumer-group-A
+2026-05-22 08:38:14 | DEBUG | C02 | KAFKA_AUTO_OFFSET_RESET           = earliest
+2026-05-22 08:38:14 | DEBUG | C02 | CONSUMER_TIMEOUT_SECONDS          = 10
+2026-05-22 08:38:14 | DEBUG | C02 | CONSUMER_MAX_MESSAGES             = 1000
+2026-05-22 08:38:14 | DEBUG | P02 | KAFKA_BOOTSTRAP_SERVERS           = localhost:9092
+2026-05-22 08:38:14 | DEBUG | P02 | KAFKA_BROKER_ADDRESS_FAMILY       = v6
+2026-05-22 08:38:14 | DEBUG | P02 | KAFKA_TOPIC                       = streaming-02-kafka-case
+2026-05-22 08:38:14 | DEBUG | P02 | KAFKA_CLEAR_TOPIC_ON_START        = true
+2026-05-22 08:38:14 | DEBUG | P02 | PRODUCER_MESSAGE_COUNT            = 3
+2026-05-22 08:38:14 | DEBUG | P02 | PRODUCER_MESSAGE_INTERVAL_SECONDS = 2
+2026-05-22 08:38:14 | DEBUG | P02 | PRODUCER_MAX_MESSAGES             = 50
+2026-05-22 08:38:14 | DEBUG | P02 | PRODUCER_POLL_INTERVAL_SECONDS    = 15
+2026-05-22 08:38:14 | DEBUG | P02 | KAFKA_GROUP_ID                    = streaming-consumer-group-A
+2026-05-22 08:38:14 | DEBUG | P02 | KAFKA_AUTO_OFFSET_RESET           = earliest
+2026-05-22 08:38:14 | DEBUG | P02 | CONSUMER_TIMEOUT_SECONDS          = 10
+2026-05-22 08:38:14 | DEBUG | P02 | CONSUMER_MAX_MESSAGES             = 1000
+2026-05-22 08:38:14 | INFO | C02 | Processing raw message.
+2026-05-22 08:38:47 | DEBUG | H03 | KAFKA_BOOTSTRAP_SERVERS           = localhost:9092
+2026-05-22 08:38:47 | DEBUG | H03 | KAFKA_BROKER_ADDRESS_FAMILY       = v6
+2026-05-22 08:38:47 | DEBUG | H03 | KAFKA_TOPIC                       = streaming-02-kafka-case
+2026-05-22 08:38:47 | DEBUG | H03 | KAFKA_CLEAR_TOPIC_ON_START        = true
+2026-05-22 08:38:47 | DEBUG | H03 | PRODUCER_MESSAGE_COUNT            = 3
+2026-05-22 08:38:47 | DEBUG | H03 | PRODUCER_MESSAGE_INTERVAL_SECONDS = 2
+2026-05-22 08:38:47 | DEBUG | H03 | PRODUCER_MAX_MESSAGES             = 50
+2026-05-22 08:38:47 | DEBUG | H03 | PRODUCER_POLL_INTERVAL_SECONDS    = 15
+2026-05-22 08:38:47 | DEBUG | H03 | KAFKA_GROUP_ID                    = streaming-consumer-group-A
+2026-05-22 08:38:47 | DEBUG | H03 | KAFKA_AUTO_OFFSET_RESET           = earliest
+2026-05-22 08:38:47 | DEBUG | H03 | CONSUMER_TIMEOUT_SECONDS          = 10
+2026-05-22 08:38:47 | DEBUG | H03 | CONSUMER_MAX_MESSAGES             = 1000
+2026-05-22 08:38:47 | INFO | H03 | === RUN START ===
+2026-05-22 08:38:47 | INFO | H03 | project=H03
+2026-05-22 08:38:47 | INFO | H03 | repo_dir=streaming-02-kafka
+2026-05-22 08:38:47 | INFO | H03 | python=3.14.5
+2026-05-22 08:38:47 | INFO | H03 | os=Windows 11
+2026-05-22 08:38:47 | INFO | H03 | shell=powershell
+2026-05-22 08:38:47 | INFO | H03 | cwd=.
+2026-05-22 08:38:47 | INFO | H03 | github_actions=False
+2026-05-22 08:38:47 | INFO | H03 | ========================
+2026-05-22 08:38:47 | INFO | H03 | START consumer main()
+2026-05-22 08:38:47 | INFO | H03 | ========================
+2026-05-22 08:38:47 | INFO | H03 | ROOT_DIR = .
+2026-05-22 08:38:47 | INFO | H03 | DATA_DIR = data
+2026-05-22 08:38:47 | INFO | H03 | OUTPUT_CSV = data\output\consumed_sales_hajiyev_summary.csv
+2026-05-22 08:38:47 | INFO | H03 | ========================
+2026-05-22 08:38:47 | INFO | H03 | SECTION A. Acquire
+2026-05-22 08:38:47 | INFO | H03 | ========================
+2026-05-22 08:38:47 | INFO | H03 | Loading settings from .env...
+2026-05-22 08:38:47 | INFO | H03 | KAFKA_BOOTSTRAP_SERVERS  = localhost:9092
+2026-05-22 08:38:47 | INFO | H03 | KAFKA_TOPIC              = streaming-02-kafka-case
+2026-05-22 08:38:47 | INFO | H03 | KAFKA_GROUP_ID           = streaming-consumer-group-A
+2026-05-22 08:38:47 | INFO | H03 | CONSUMER_TIMEOUT_SECONDS = 10.0
+2026-05-22 08:38:47 | INFO | H03 | CONSUMER_MAX_MESSAGES    = 1000
+2026-05-22 08:38:47 | INFO | H03 | Verifying Kafka connection...
+2026-05-22 08:38:47 | INFO | H03 | Kafka port is reachable.
+2026-05-22 08:38:47 | INFO | H03 | Verifying Kafka topic...
+2026-05-22 08:38:49 | INFO | H03 | Topic 'streaming-02-kafka-case' exists.
+2026-05-22 08:38:49 | INFO | H03 | Found 0 message(s) available.
+2026-05-22 08:38:49 | ERROR | H03 | Topic is empty. Run the producer first.
+2026-05-22 08:39:22 | DEBUG | P02 | KAFKA_BOOTSTRAP_SERVERS           = localhost:9092
+2026-05-22 08:39:22 | DEBUG | P02 | KAFKA_BROKER_ADDRESS_FAMILY       = v6
+2026-05-22 08:39:22 | DEBUG | P02 | KAFKA_TOPIC                       = streaming-02-kafka-case
+2026-05-22 08:39:22 | DEBUG | P02 | KAFKA_CLEAR_TOPIC_ON_START        = true
+2026-05-22 08:39:22 | DEBUG | P02 | PRODUCER_MESSAGE_COUNT            = 3
+2026-05-22 08:39:22 | DEBUG | P02 | PRODUCER_MESSAGE_INTERVAL_SECONDS = 2
+2026-05-22 08:39:22 | DEBUG | P02 | PRODUCER_MAX_MESSAGES             = 50
+2026-05-22 08:39:22 | DEBUG | P02 | PRODUCER_POLL_INTERVAL_SECONDS    = 15
+2026-05-22 08:39:22 | DEBUG | P02 | KAFKA_GROUP_ID                    = streaming-consumer-group-A
+2026-05-22 08:39:22 | DEBUG | P02 | KAFKA_AUTO_OFFSET_RESET           = earliest
+2026-05-22 08:39:22 | DEBUG | P02 | CONSUMER_TIMEOUT_SECONDS          = 10
+2026-05-22 08:39:22 | DEBUG | P02 | CONSUMER_MAX_MESSAGES             = 1000
+2026-05-22 08:39:22 | INFO | P02 | === RUN START ===
+2026-05-22 08:39:22 | INFO | P02 | project=P02
+2026-05-22 08:39:22 | INFO | P02 | repo_dir=streaming-02-kafka
+2026-05-22 08:39:22 | INFO | P02 | python=3.14.5
+2026-05-22 08:39:22 | INFO | P02 | os=Windows 11
+2026-05-22 08:39:22 | INFO | P02 | shell=powershell
+2026-05-22 08:39:22 | INFO | P02 | cwd=.
+2026-05-22 08:39:22 | INFO | P02 | github_actions=False
+2026-05-22 08:39:22 | INFO | P02 | ========================
+2026-05-22 08:39:22 | INFO | P02 | START producer main()
+2026-05-22 08:39:22 | INFO | P02 | ========================
+2026-05-22 08:39:22 | INFO | P02 | ROOT_DIR = .
+2026-05-22 08:39:22 | INFO | P02 | DATA_DIR = data
+2026-05-22 08:39:22 | INFO | P02 | SALES_CSV = data\sales.csv
+2026-05-22 08:39:22 | INFO | P02 | ========================
+2026-05-22 08:39:22 | INFO | P02 | SECTION A. Acquire
+2026-05-22 08:39:22 | INFO | P02 | ========================
+2026-05-22 08:39:22 | INFO | P02 | Loading settings from .env...
+2026-05-22 08:39:22 | INFO | P02 | KAFKA_BOOTSTRAP_SERVERS           = localhost:9092
+2026-05-22 08:39:22 | INFO | P02 | KAFKA_TOPIC                       = streaming-02-kafka-case
+2026-05-22 08:39:22 | INFO | P02 | PRODUCER_MESSAGE_COUNT            = 3
+2026-05-22 08:39:22 | INFO | P02 | PRODUCER_MESSAGE_INTERVAL_SECONDS = 2.0
+2026-05-22 08:39:22 | INFO | P02 | KAFKA_CLEAR_TOPIC_ON_START        = True
+2026-05-22 08:39:22 | INFO | P02 | Verifying Kafka connection...
+2026-05-22 08:39:22 | INFO | P02 | Kafka port is reachable.
+2026-05-22 08:39:24 | INFO | P02 | ========================
+2026-05-22 08:39:24 | INFO | P02 | SECTION P. Produce Messages
+2026-05-22 08:39:24 | INFO | P02 | ========================
+2026-05-22 08:39:24 | INFO | P02 | Sending messages...
+2026-05-22 08:39:24 | INFO | P02 | Sending up to 3 message(s) to topic 'streaming-02-kafka-case'.
+2026-05-22 08:39:24 | INFO | P02 | Watch each sale arrive. Press CTRL+C to stop early.
+
+2026-05-22 08:39:24 | INFO | P02 | {
+  order_id: e7324981-a9f0-419f-b708-d0a333451fff
+  datetime: 2026-05-04T08:11:00Z
+  region_id: US-TX
+  currency_code: USD
+  product_id: PY-STREAM-005
+  unit_price: 59.99
+  quantity: 3
+  is_online: true
+  customer_id: CUST-4150
+  is_new_customer: false
+  device_type: tablet
+  payment_method: paypal
+  referral_source: paid_search
+  discount_code: 
+  customer_note: Gift for my team
+}
+2026-05-22 08:39:24 | INFO | P02 |   Sending message with key=US-TX
+2026-05-22 08:39:24 | INFO | P02 |   MESSAGE SENT  sent=1
+2026-05-22 08:39:26 | INFO | P02 | {
+  order_id: d61943e0-f543-4b5f-9c9a-18605ea4cfe5
+  datetime: 2026-05-04T08:23:00Z
+  region_id: US-TX
+  currency_code: USD
+  product_id: PY-DATA-002
+  unit_price: 49.99
+  quantity: 1
+  is_online: true
+  customer_id: CUST-1106
+  is_new_customer: false
+  device_type: mobile
+  payment_method: paypal
+  referral_source: paid_search
+  discount_code: 
+  customer_note: Gift for my team
+}
+2026-05-22 08:39:26 | INFO | P02 |   Sending message with key=US-TX
+2026-05-22 08:39:26 | INFO | P02 |   MESSAGE SENT  sent=2
+2026-05-22 08:39:28 | INFO | P02 | {
+  order_id: 14da1915-8e74-47be-9e10-f7275d31af46
+  datetime: 2026-05-04T08:28:00Z
+  region_id: CA-QC
+  currency_code: CAD
+  product_id: PY-NLP-006
+  unit_price: 54.99
+  quantity: 1
+  is_online: true
+  customer_id: CUST-2133
+  is_new_customer: false
+  device_type: desktop
+  payment_method: paypal
+  referral_source: organic
+  discount_code: 
+  customer_note: Learning at my own pace
+}
+2026-05-22 08:39:28 | INFO | P02 |   Sending message with key=CA-QC
+2026-05-22 08:39:28 | INFO | P02 |   MESSAGE SENT  sent=3
+2026-05-22 08:39:30 | INFO | P02 | ========================
+2026-05-22 08:39:30 | INFO | P02 | SECTION E. Exit
+2026-05-22 08:39:30 | INFO | P02 | ========================
+2026-05-22 08:39:30 | INFO | P02 | Summary:
+2026-05-22 08:39:30 | INFO | P02 | Sent 3 message(s) to topic 'streaming-02-kafka-case'.
+2026-05-22 08:39:30 | INFO | P02 | ========================
+2026-05-22 08:39:30 | INFO | P02 | Producer executed successfully!
+2026-05-22 08:39:30 | INFO | P02 | ========================
+2026-05-22 08:39:47 | DEBUG | H03 | KAFKA_BOOTSTRAP_SERVERS           = localhost:9092
+2026-05-22 08:39:47 | DEBUG | H03 | KAFKA_BROKER_ADDRESS_FAMILY       = v6
+2026-05-22 08:39:47 | DEBUG | H03 | KAFKA_TOPIC                       = streaming-02-kafka-case
+2026-05-22 08:39:47 | DEBUG | H03 | KAFKA_CLEAR_TOPIC_ON_START        = true
+2026-05-22 08:39:47 | DEBUG | H03 | PRODUCER_MESSAGE_COUNT            = 3
+2026-05-22 08:39:47 | DEBUG | H03 | PRODUCER_MESSAGE_INTERVAL_SECONDS = 2
+2026-05-22 08:39:47 | DEBUG | H03 | PRODUCER_MAX_MESSAGES             = 50
+2026-05-22 08:39:47 | DEBUG | H03 | PRODUCER_POLL_INTERVAL_SECONDS    = 15
+2026-05-22 08:39:47 | DEBUG | H03 | KAFKA_GROUP_ID                    = streaming-consumer-group-A
+2026-05-22 08:39:47 | DEBUG | H03 | KAFKA_AUTO_OFFSET_RESET           = earliest
+2026-05-22 08:39:47 | DEBUG | H03 | CONSUMER_TIMEOUT_SECONDS          = 10
+2026-05-22 08:39:47 | DEBUG | H03 | CONSUMER_MAX_MESSAGES             = 1000
+2026-05-22 08:39:47 | INFO | H03 | === RUN START ===
+2026-05-22 08:39:47 | INFO | H03 | project=H03
+2026-05-22 08:39:47 | INFO | H03 | repo_dir=streaming-02-kafka
+2026-05-22 08:39:47 | INFO | H03 | python=3.14.5
+2026-05-22 08:39:47 | INFO | H03 | os=Windows 11
+2026-05-22 08:39:47 | INFO | H03 | shell=powershell
+2026-05-22 08:39:47 | INFO | H03 | cwd=.
+2026-05-22 08:39:47 | INFO | H03 | github_actions=False
+2026-05-22 08:39:47 | INFO | H03 | ========================
+2026-05-22 08:39:47 | INFO | H03 | START consumer main()
+2026-05-22 08:39:47 | INFO | H03 | ========================
+2026-05-22 08:39:47 | INFO | H03 | ROOT_DIR = .
+2026-05-22 08:39:47 | INFO | H03 | DATA_DIR = data
+2026-05-22 08:39:47 | INFO | H03 | OUTPUT_CSV = data\output\consumed_sales_hajiyev_summary.csv
+2026-05-22 08:39:47 | INFO | H03 | ========================
+2026-05-22 08:39:47 | INFO | H03 | SECTION A. Acquire
+2026-05-22 08:39:47 | INFO | H03 | ========================
+2026-05-22 08:39:47 | INFO | H03 | Loading settings from .env...
+2026-05-22 08:39:47 | INFO | H03 | KAFKA_BOOTSTRAP_SERVERS  = localhost:9092
+2026-05-22 08:39:47 | INFO | H03 | KAFKA_TOPIC              = streaming-02-kafka-case
+2026-05-22 08:39:47 | INFO | H03 | KAFKA_GROUP_ID           = streaming-consumer-group-A
+2026-05-22 08:39:47 | INFO | H03 | CONSUMER_TIMEOUT_SECONDS = 10.0
+2026-05-22 08:39:47 | INFO | H03 | CONSUMER_MAX_MESSAGES    = 1000
+2026-05-22 08:39:47 | INFO | H03 | Verifying Kafka connection...
+2026-05-22 08:39:47 | INFO | H03 | Kafka port is reachable.
+2026-05-22 08:39:47 | INFO | H03 | Verifying Kafka topic...
+2026-05-22 08:39:49 | INFO | H03 | Topic 'streaming-02-kafka-case' exists.
+2026-05-22 08:39:49 | INFO | H03 | Found 3 message(s) available.
+2026-05-22 08:39:49 | INFO | H03 | Creating Kafka consumer...
+2026-05-22 08:39:49 | INFO | H03 | Subscribed to topic: 'streaming-02-kafka-case' (reading from beginning)
+2026-05-22 08:39:49 | INFO | H03 | ========================
+2026-05-22 08:39:49 | INFO | H03 | SECTION C. Consume and Aggregate Messages
+2026-05-22 08:39:49 | INFO | H03 | ========================
+2026-05-22 08:39:49 | INFO | H03 | Initializing output...
+2026-05-22 08:39:49 | INFO | H03 | Output CSV cleared: consumed_sales_hajiyev_summary.csv
+2026-05-22 08:39:49 | INFO | H03 | Consuming and aggregating messages...
+2026-05-22 08:39:49 | INFO | H03 | Waiting for up to 1000 message(s).
+2026-05-22 08:39:49 | INFO | H03 | Press CTRL+C to stop early.
+
+2026-05-22 08:39:52 | INFO | H03 | {'currency_code': 'USD', 'customer_id': 'CUST-4150', 'customer_note': 'Gift for my team', 'datetime': '2026-05-04T08:11:00Z', 'device_type': 'tablet', 'discount_code': '', 'is_new_customer': 'false', 'is_online': 'true', 'order_id': 'e7324981-a9f0-419f-b708-d0a333451fff', 'payment_method': 'paypal', 'product_id': 'PY-STREAM-005', 'quantity': '3', 'referral_source': 'paid_search', 'region_id': 'US-TX', 'unit_price': '59.99', '_kafka_key': 'US-TX', '_kafka_partition': 0, '_kafka_offset': 0}
+2026-05-22 08:39:52 | INFO | H03 | Processing message for aggregation.
+2026-05-22 08:39:52 | INFO | H03 | Updated region=US-TX, product=PY-STREAM-005, revenue=179.97
+2026-05-22 08:39:52 | INFO | H03 | MESSAGE PROCESSED
+2026-05-22 08:39:52 | INFO | H03 | consumed=1
+2026-05-22 08:39:52 | INFO | H03 | {'currency_code': 'USD', 'customer_id': 'CUST-1106', 'customer_note': 'Gift for my team', 'datetime': '2026-05-04T08:23:00Z', 'device_type': 'mobile', 'discount_code': '', 'is_new_customer': 'false', 'is_online': 'true', 'order_id': 'd61943e0-f543-4b5f-9c9a-18605ea4cfe5', 'payment_method': 'paypal', 'product_id': 'PY-DATA-002', 'quantity': '1', 'referral_source': 'paid_search', 'region_id': 'US-TX', 'unit_price': '49.99', '_kafka_key': 'US-TX', '_kafka_partition': 0, '_kafka_offset': 1}
+2026-05-22 08:39:52 | INFO | H03 | Processing message for aggregation.
+2026-05-22 08:39:52 | INFO | H03 | Updated region=US-TX, product=PY-DATA-002, revenue=49.99
+2026-05-22 08:39:52 | INFO | H03 | MESSAGE PROCESSED
+2026-05-22 08:39:52 | INFO | H03 | consumed=2
+2026-05-22 08:39:52 | INFO | H03 | {'currency_code': 'CAD', 'customer_id': 'CUST-2133', 'customer_note': 'Learning at my own pace', 'datetime': '2026-05-04T08:28:00Z', 'device_type': 'desktop', 'discount_code': '', 'is_new_customer': 'false', 'is_online': 'true', 'order_id': '14da1915-8e74-47be-9e10-f7275d31af46', 'payment_method': 'paypal', 'product_id': 'PY-NLP-006', 'quantity': '1', 'referral_source': 'organic', 'region_id': 'CA-QC', 'unit_price': '54.99', '_kafka_key': 'CA-QC', '_kafka_partition': 0, '_kafka_offset': 2}
+2026-05-22 08:39:52 | INFO | H03 | Processing message for aggregation.
+2026-05-22 08:39:52 | INFO | H03 | Updated region=CA-QC, product=PY-NLP-006, revenue=54.99
+2026-05-22 08:39:52 | INFO | H03 | MESSAGE PROCESSED
+2026-05-22 08:39:52 | INFO | H03 | consumed=3
+2026-05-22 08:40:02 | INFO | H03 | No message received within 10.0s timeout.
+2026-05-22 08:40:02 | INFO | H03 | Producer finished or paused. Stopping consumer.
+2026-05-22 08:40:03 | INFO | H03 | Kafka consumer closed.
+2026-05-22 08:40:03 | INFO | H03 | ========================
+2026-05-22 08:40:03 | INFO | H03 | SECTION D. Write Summary
+2026-05-22 08:40:03 | INFO | H03 | ========================
+2026-05-22 08:40:03 | INFO | H03 | Writing summary statistics to CSV...
+2026-05-22 08:40:03 | INFO | H03 | Region Summary:
+2026-05-22 08:40:03 | INFO | H03 |   CA-QC: 1 orders, $54.99 total
+2026-05-22 08:40:03 | INFO | H03 |   US-TX: 2 orders, $229.96 total
+2026-05-22 08:40:03 | INFO | H03 | Product Summary:
+2026-05-22 08:40:03 | INFO | H03 |   PY-DATA-002: 1 orders, $49.99 total
+2026-05-22 08:40:03 | INFO | H03 |   PY-NLP-006: 1 orders, $54.99 total
+2026-05-22 08:40:03 | INFO | H03 |   PY-STREAM-005: 1 orders, $179.97 total
+2026-05-22 08:40:03 | INFO | H03 | ========================
+2026-05-22 08:40:03 | INFO | H03 | SECTION E. Exit
+2026-05-22 08:40:03 | INFO | H03 | ========================
+2026-05-22 08:40:03 | INFO | H03 | Summary:
+2026-05-22 08:40:03 | INFO | H03 | Consumed and aggregated 3 message(s) from topic 'streaming-02-kafka-case'.
+2026-05-22 08:40:03 | INFO | H03 | OUTPUT_CSV = data\output\consumed_sales_hajiyev_summary.csv
+2026-05-22 08:40:03 | INFO | H03 | ========================
+2026-05-22 08:40:03 | INFO | H03 | Consumer executed successfully!
+2026-05-22 08:40:03 | INFO | H03 | ========================
