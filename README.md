@@ -54,6 +54,15 @@ to complete:
 4. Phase 4. **Modify**
 5. Phase 5. **Apply**
 
+## Custom Project
+
+For the custom project I created two new consumer files in `src/streaming/`:
+
+- `kafka_consumer_hajiyev.py` — a USD-only consumer that filters Kafka sales records and writes only USD transactions to `data/output/consumed_sales_hajiyev_usd.csv`.
+- `kafka_consumer_hajiyev_aggregator.py` — a sales aggregator that summarizes consumed orders by region and product, then writes totals and averages to `data/output/consumed_sales_hajiyev_summary.csv`.
+
+These files show how I extended the example workflow to answer a new business question and produce new analytics output.
+
 ## Challenges
 
 Challenges are expected.
@@ -225,6 +234,11 @@ Clear the terminal, then start the consumer.
 ```shell
 clear
 uv run python -m streaming.kafka_consumer_case
+```
+
+```shell
+uv run python -m streaming.kafka_consumer_hajiyev
+uv run python -m streaming.kafka_consumer_hajiyev_aggregator
 ```
 
 To start fresh, see
