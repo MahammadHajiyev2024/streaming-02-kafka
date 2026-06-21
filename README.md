@@ -209,7 +209,7 @@ uvx pre-commit run --all-files
 
 # run the producer
 clear
-uv run python -m streaming.kafka_producer_case
+uv run python -m streaming.kafka_producer_hajiyev
 
 # do chores
 uv run ruff format .
@@ -231,12 +231,9 @@ If running Windows, use **PowerShell**.
 Run the commands one at a time.
 Clear the terminal, then start the consumer.
 
-```shell
-clear
-uv run python -m streaming.kafka_consumer_case
-```
 
 ```shell
+clear
 uv run python -m streaming.kafka_consumer_hajiyev
 uv run python -m streaming.kafka_consumer_hajiyev_aggregator
 ```
